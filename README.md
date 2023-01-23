@@ -11,6 +11,7 @@ https://docs.docker.com/desktop/install/windows-install/
 
 sau khi cài đặt nếu có lỗi 
  "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/version": open //./pipe/docker_engine: The system cannot find the file specified.
+ 
 ===> 
 With Powershell:
 Open Powershell as administrator
@@ -19,6 +20,12 @@ Launch command: & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
 OR, with cmd:
 Open cmd as administrator
 Launch command: "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon
+
+Revole error: "no matching manifest for windows/amd64 xxx in the manifest list entries."
+===>
+ 1. Go to Docker configurations
+ 2. Go to the Docker Engine tab
+ 3. Change the line **"experimental": false** to **"experimental": true**
 
 - Cho linux
 https://docs.docker.com/desktop/install/linux-install/
