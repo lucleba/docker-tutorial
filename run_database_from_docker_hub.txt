@@ -1,0 +1,66 @@
+
+Pull images : goto docker hub and search with the keyworld that you want. (ex: sql server, mysql, node, ...)
+
+docker pull <image_name>[:tag]
+
+docker pull mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+docker pull mcr.microsoft.com/mssql/server:2017-CU28-ubuntu-16.04
+tag = version
+
+Create containers from images
+1 image => multiple containers
+-d : Detach(background) mode
+-e: environment variables
+--name : container's name
+-p: map port
+-v: mapping PC volume to Container volume
+	Các ổ đĩa có thể được chia sẻ an toàn hơn giữa nhiều vùng chứa.
+	Dữ liệu sẽ không bị mất khi xóa container
+	-v <local_volume>:< container_volume >
+	docker volume inspect <volume-name>  hiển thị thông tin chi tiết của volume. 
+	
+	
+Run SQL SERVER Container:
+	
+	MacOS/Linux:
+		docker run \
+		-e "ACCEPT_EULA=Y" \
+		-e "SA_PASSWORD=Abc@123456789" \
+		--name sql-server-2019-container \
+		-p 1435:1433 \
+		-v /Users/<user_name>/Desktop/temp:/var/opt/mssql \
+		-d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+	
+	Windows with default volume path:
+		docker run ^
+		-e "ACCEPT_EULA=Y" ^
+		-e "SA_PASSWORD=Abc@123456789" ^
+		--name sql-server-2019-container ^
+		-p 1435:1433 ^
+		-v my-volume-1:/var/opt/mssql ^
+		-d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+	
+Run MYSQL Container:	
+	
+	MacOS(Linux):
+		docker run \
+		-e MYSQL_ROOT_PASSWORD=Abc@123456789 \
+		--name mysql-container \
+		-p 3308:3306 \
+		-v mysql-volume:/var/lib/mysql \
+		-d mysql
+		
+	Windows:
+		docker run ^
+		-e MYSQL_ROOT_PASSWORD=Abc@123456789 ^
+		--name mysql-container ^
+		-p 3308:3306 ^
+		-v mysql-volume:/var/lib/mysql ^
+		-d mysql
+		
+Go inside the container:
+-it = interactive mode
+
+docker exec -it mysql8-container bash
+Then:
+mysql -u root -p
