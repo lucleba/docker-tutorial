@@ -15,11 +15,11 @@ sau khi cài đặt nếu có lỗi
  ===> 
 With Powershell: 
 Open Powershell as administrator 
-Launch command: & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
+ Launch command: _& 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon_
 
 OR, with cmd: 
 Open cmd as administrator  
-Launch command: "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon
+ Launch command: _"C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon_
 
 Revole error: "no matching manifest for windows/amd64 xxx in the manifest list entries."
 ===>
