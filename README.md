@@ -11,7 +11,8 @@ https://docs.docker.com/desktop/install/windows-install/
 
 sau khi cài đặt nếu có lỗi 
  "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/version": open //./pipe/docker_engine: The system cannot find the file specified. 
-===> 
+
+ ===> 
 With Powershell: 
 Open Powershell as administrator 
 Launch command: & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
