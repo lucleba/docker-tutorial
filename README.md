@@ -8,19 +8,18 @@
 https://docs.docker.com/desktop/install/mac-install/
 - Cho Win 
 https://docs.docker.com/desktop/install/windows-install/
- install and enable WLS on windows: https://learn.microsoft.com/en-us/windows/wsl/install
+ - install and enable WLS on windows: https://learn.microsoft.com/en-us/windows/wsl/install
 
 sau khi cài đặt nếu có lỗi 
- "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/version": open //./pipe/docker_engine: The system cannot find the file specified. 
+ + "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/version": open //./pipe/docker_engine: The system cannot find the file specified. 
 
- ===> 
-With Powershell: 
-Open Powershell as administrator 
- Launch command: _& 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon_
+ - ===> With Powershell:
+ -  Open Powershell as administrator 
+ -  Launch command: _& 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon_
 
 OR, with cmd: 
-Open cmd as administrator  
- Launch command: _"C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon_
+- Open cmd as administrator  
+-  Launch command: _"C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchDaemon_
 
 Revole error: "no matching manifest for windows/amd64 xxx in the manifest list entries."
 ===>
