@@ -1,0 +1,54 @@
+App with multiple containers:
+( reference doc : https://docs.docker.com/compose/compose-file/ )
+YAML file (Compose file) định nghĩa các services, networks, volumes cho Docker.
+YAML file được sử dụng để khai báo multi-containers sẽ được run khi chạy cùng lúc.
+YAML sử dụng cú pháp viết với khảng trắng (space), phần tử dữ liệu con viết thụt vào 2 khoảng trắng so với dữ liệu cha.
+
+Các chú thích viết bắt đầu bằng #.
+	# đây là chú thích
+
+Giá trị một đối tượng:
+	Được biểu diễn bằng viết trên một dòng key:giá-trị 
+	name : thienluc
+	age: 30
+
+Đối tượng, chứa các đối tượng con:
+	Khi một đối tượng cha chứa đối tượng con, 
+	thì đối tượng đó không được chứa giá trị và các đối tượng con biểu diễn bằng các dòng key:value thụt đầu dòng 2 khoẳng trắng so với phần tử cha.
+	
+	thienluc:
+	  name: lebaluc
+	  age: 30
+
+
+Đối tượng mảng:  các phần tử mảng biểu diễn trên mỗi dòng, thụt 2 khoảng trắng và bắt đầu bằng "-"
+	name : thienluc
+	children:
+	  - children1_name: đẹp trai
+	  - children2_name: xinh gái
+
+
+Biên tập docker-compose.yml
+Put all params/configurations into a .yml file => Docker compose
+docker-compose version (https://docs.docker.com/compose/compose-file/compose-file-v3/)
+	version: "3.8" 
+
+app services = multiple containers
+	
+	services: 
+	  node-mysql-container:  # định nghĩa container node-mysql-container
+	    ...........
+	  mysql-container:
+	    ...........
+		
+Tạo và chạy các thành phần định nghĩa trong docker-compose.yml (các dịch vụ, image, container, mạng, đĩa ...)
+	docker-compose up
+	-f : file
+	-d : detach(background mode)
+	docker-compose -f ./docker-compose.yml up -d 
+	
+Dừng và xóa : container tạo ra bởi docker-compose up
+	docker-compose down
+	
+Theo dõi Logs từ các dịch vụ
+	docker-compose logs [SERVICES]

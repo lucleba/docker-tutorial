@@ -13,11 +13,12 @@ Create containers from images
 -e: environment variables
 --name : container's name
 -p: map port
+-w: working directory  (thư mục gốc của container) các resource sẽ được coppy vào thư mục này.
 -v: mapping PC volume to Container volume
 	Các ổ đĩa có thể được chia sẻ an toàn hơn giữa nhiều vùng chứa.
-	Dữ liệu sẽ không bị mất khi xóa container
+	Dữ liệu sẽ không bị mất khi xóa container, có thể chỉnh sửa source code trên local và run container không cần build lại image
 	-v <local_volume>:< container_volume >
-	docker volume inspect <volume-name>  hiển thị thông tin chi tiết của volume. 
+	docker volume inspect <volume-name>    hiển thị thông tin chi tiết của volume. 
 	
 	
 Run SQL SERVER Container:
@@ -55,12 +56,12 @@ Run MYSQL Container:
 		-e MYSQL_ROOT_PASSWORD=Abc@123456789 ^
 		--name mysql-container ^
 		-p 3308:3306 ^
-		-v mysql-volume:/var/lib/mysql ^
+		-v "C:\Users\6137\work\AWS\Git\mysql:/var/lib/mysql" ^
 		-d mysql
 		
 Go inside the container:
--it = interactive mode
+-it = interactive mode : tương tác trực tiếp với container
 
-docker exec -it mysql8-container bash
+docker exec -it mysql-container bash
 Then:
 mysql -u root -p
