@@ -1,0 +1,57 @@
+khởi tạo project 
+	https://start.spring.io/
+	
+add dependencies
+	spring web
+	H2 Database
+		In-memory database, tắt app đi bặt app lên thì data mất
+	Database driver connect
+		Mysql Driver
+		MS SQL Server driver
+		......
+	Spring data JPA  ( java persistence API )
+	
+	=> Explore source
+	extract zip file and go to folder: cd folder
+	Build your springboot project with Maven Wrapper:
+	
+		mvnw spring-boot:run 
+		this command will downloads the dependencies, build the project and starts it.
+
+Build docker
+	docker build -t spring-example:v1.0 .
+	
+
+Run Container from custom image 
+	IOS/Linux
+		docker run -dp 8085:8083 \
+		--name java-spring-boot-example \
+		-v "C:\Users\6137\work\AWS\Git\spring-example:/app" \
+		--network todo-app-network \
+		-e MYSQL_HOST=todo-app-network-alias \
+		spring-example:v1.0
+
+	Windows:
+		docker run -dp 8085:8083 ^
+		--name java-spring-boot-example ^
+		-v "C:\Users\6137\work\AWS\Git\spring-example:/app" ^
+		--network todo-app-network ^
+		-e MYSQL_HOST=todo-app-network-alias ^
+		spring-example:v1.0
+
+Test Springboot app(you can use Web Browser, Postman):
+	Browser:
+		http://localhost:8085/api/v1/students
+	Command line:
+		curl --request GET \
+		--url http://localhost:8085/api/v1/students \
+		--header 'content-type: application/json'
+		
+restart container
+	docker restart <container-name>
+
+Biên tập docker-compose.yml để chạy ứng dựng java kết nối với Mysql	
+	tham khảo file hướng dẫn:
+		https://github.com/lucleba/docker-tutorial/blob/main/run_app_with_multi_container.txt
+		
+	
