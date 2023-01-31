@@ -2,7 +2,7 @@
 1. Docker là gì?
 - Docker là một phần mềm nguồn mở được thiết kế để hỗ trợ và đơn giản hóa việc phát triển ứng dụng. 
 - Nó là một tập hợp các platform-as-a-service products tạo ra các virtualized environments độc lập để building, deploy , và testing các ứng dụng.
-
+- reference document:  https://docs.docker.com/reference/
 2. Download and Install docker
 - Cho mac
 https://docs.docker.com/desktop/install/mac-install/
