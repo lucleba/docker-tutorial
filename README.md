@@ -1,8 +1,12 @@
 # docker-tutorial
 1. Docker là gì?
 - Docker là một phần mềm nguồn mở được thiết kế để hỗ trợ và đơn giản hóa việc phát triển ứng dụng. 
-- Nó là một tập hợp các platform-as-a-service products tạo ra các virtualized environments độc lập để building, deploy , và testing các ứng dụng.
+- Nó là một tập hợp các platform-as-a-service products tạo ra các virtualized environments (container) độc lập để building, deploy , và testing các ứng dụng.
 - reference document:  https://docs.docker.com/reference/
+- túm cái quần là: Docker là công cụ tiêu chuẩn defactor dùng để tạo và quản lý container.
+- (Câu hỏi là tại sao lại dùng container mà không dùng máy ảo? ).-> thế này thì phải xem lại kiến trúc của máy ảo và container rồi.
+- Máy ảo được xem như là 1 máy tính độc lập (có cpu, ram, ổ cứng) được chia sẻ bởi máy local. được cài rất nhiều thứ mà có thể ứng dụng chả dùng đến, rồi là khi tiết lập máy ảo phải tinhs toán tài nguyên..., trường hợp chạy nhiều máy ảo, thì ram, cpu đâu cho lại '(
+- Với container thì không cần phải cài đặt máy ảo, mà sử dụng vùng chứa tích hợp (OS built in / emulated container support). 
 2. Download and Install docker
 - Cho mac
 https://docs.docker.com/desktop/install/mac-install/
