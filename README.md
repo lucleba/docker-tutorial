@@ -7,11 +7,12 @@
 - (Câu hỏi là tại sao lại dùng container mà không dùng máy ảo? ).-> thế này thì phải xem lại kiến trúc của máy ảo và container rồi.
 - Máy ảo được xem như là 1 máy tính độc lập (có cpu, ram, ổ cứng) được chia sẻ bởi máy local. được cài rất nhiều thứ mà có thể ứng dụng chả dùng đến, rồi là khi tiết lập máy ảo phải tinhs toán tài nguyên..., trường hợp chạy nhiều máy ảo, thì ram, cpu đâu cho lại '(
 - Với container thì không cần phải cài đặt máy ảo, mà sử dụng vùng chứa tích hợp (OS built in / emulated container support). 
-2. Download and Install docker
+2. Download and Install docker desktop
 - Cho mac
 https://docs.docker.com/desktop/install/mac-install/
 - Cho Win 
 https://docs.docker.com/desktop/install/windows-install/
+ - Enable Hyper-V using PowerShell: https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
  - install and enable WLS on windows: https://learn.microsoft.com/en-us/windows/wsl/install
 
 sau khi cài đặt nếu có lỗi 
