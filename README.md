@@ -33,10 +33,10 @@
 		 3. Change the line **"experimental": false** to **"experimental": true**
 
 	c) Cho linux
-		https://docs.docker.com/desktop/install/linux-install/
-		sudo usermod -aG docker $USER
-		sudo chown $USER /var/run/docker.sock
-		sudo chmod +x /var/run/docker.sock
+		https://docs.docker.com/desktop/install/linux-install/  
+		sudo usermod -aG docker $USER  
+		sudo chown $USER /var/run/docker.sock  
+		sudo chmod +x /var/run/docker.sock  
 
 4. Docker Toolbox cho những máy không thể cài docker desktop
 	- MacOS: https://github.com/docker-archive/toolbox/blob/master/docs/toolbox_install_mac.md
