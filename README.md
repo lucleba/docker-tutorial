@@ -34,17 +34,20 @@
 
 	c) Cho linux
 		https://docs.docker.com/desktop/install/linux-install/
+		sudo usermod -aG docker $USER
+		sudo chown $USER /var/run/docker.sock
+		sudo chmod +x /var/run/docker.sock
 
-3. Docker Toolbox cho những máy không thể cài docker desktop
+4. Docker Toolbox cho những máy không thể cài docker desktop
 	- MacOS: https://github.com/docker-archive/toolbox/blob/master/docs/toolbox_install_mac.md
 	- Windows: https://github.com/docker-archive/toolbox/blob/master/docs/toolbox_install_windows.md
 
-4. Giới thiệu về Dockerfiles
+5. Giới thiệu về Dockerfiles
 	- Là file script chứa các command khai báo các dependencies, và binary libraries và tạo ra 1 Docker image. 
 	- Câu lệnh để tạo ra 1 image từ Dockerfile là 
 	**_docker build_**
 
-5. Giới thiệu về Docker image ( có thể gọi là snapshots )
+6. Giới thiệu về Docker image ( có thể gọi là snapshots )
 - là file được tạo từ các thông tin khai báo trong Dockerfile,
 chứa các source code, libraries, dependencies, tools và các files khác cần thiết cho một ứng dụng để chạy.
 - Chúng đại diện cho một application và virtual environment của nó tại một thời điểm cụ thể. 
