@@ -37,6 +37,8 @@
 		sudo usermod -aG docker $USER  
 		sudo chown $USER /var/run/docker.sock  
 		sudo chmod +x /var/run/docker.sock  
+thay đổi folder mặc định của docker:
+https://diegocarrasco.com/change-docker-data-directory-vps-optimization/
 
 4. Docker Toolbox cho những máy không thể cài docker desktop
 	- MacOS: https://github.com/docker-archive/toolbox/blob/master/docs/toolbox_install_mac.md
